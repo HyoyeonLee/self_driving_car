@@ -1,12 +1,14 @@
 import RPi.GPIO as GPIO
 import time
 """
-LED1 = 26
-LED2 = 16
-LED3 = 20
-LED4 = 21
+FRONT [L]LED1 = 26
+FRONT [R]LED2 = 16
+BACK  [L]LED3 = 20
+BACK  [R]LED4 = 21
 """
 LEDs = [26,16,20,21]
+
+LED_senarios = [[],[],[],[],[],]
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM) 
     #board com mode (instead of pin numbers, use GPIO numbering)
