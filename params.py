@@ -29,18 +29,15 @@ MOTOR_INs = [MOTOR_A_L_IN1,MOTOR_A_L_IN2,MOTOR_B_L_IN1,MOTOR_B_R_IN2]
 
 BT_RX = 14
 BT_TX = 15
-
-mDo = 261
-mRe = 293
-mMi = 329
-mFa = 349
-mSol = 392
-mLa = 440
-mSi = 493
-mDO = 523
-
-#mHonking = []
-#mParking = []
+x = 0.1
+o = 0.2
+q = 0.4
+d = 0.8
+notes = [262,294,330,349,392,415,440,494,523,587,584,659,698,784,880,987]
+melody_Honking = [4,0,4]
+duration_Honking = [o,x,o]
+melody_Parking = [11,10,11,10,11,7,9,8,6,0]#,2,6,7,2,5,7,8,2,11,10,11,10,11,7,9,8,6,0,2,6,7,2,8,7,6]
+duration_Parking = [o,o,o,o,o,o,o,o,d,o]
 """
 --------------------------------------
         |   MOTOR       |   LED
@@ -60,9 +57,7 @@ RIGHT   |  F      B     |   X O
 STOP    |  F=0    F=0   |   X X
         |               |   X X
 ---------------------------------------
-motor [IN1 IN2 IN1 IN2] led [FL FR BL BR]
-           A   |   B
-
+motor A[IN1 IN2] B[IN1 IN2] led [FL FR BL BR]
 """
 
 STATE_FORWARD  = [[0,1,0,1],[1,1,0,0]]
