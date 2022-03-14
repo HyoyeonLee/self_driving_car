@@ -1,3 +1,6 @@
+#for testing camera feed, image labelling, and image manipulations.
+
+
 import numpy as np
 import cv2
 import os
