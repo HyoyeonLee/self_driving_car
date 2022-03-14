@@ -25,7 +25,7 @@ pwm_motor_left.start(0)
 pwm_motor_right.start(0)
 pwm_buzzer = GPIO.PWM(BUZZER,notes[0])
 pwm_buzzer.stop()
-#find serial port of bluetooth
+#find bluetooth serial port 
 #by      :  ls -l /dev/serial0
 #returns :  >ttyS0
 bt_serial = serial.Serial("/dev/ttyS0",baudrate = 9600, timeout = 1.0)
@@ -44,7 +44,7 @@ def imageProcessing_thread():
     src = cv2.cvtColor(src,cv2.COLOR_BGR2GRAY)
     #src = cv2.flip(src,-1)
     cv2.imshow("org",src)
-    #height = src.shape[0]
+    height = src.shape[0]
     out = src[int(height/2):,:]
     out = cv2.GaussianBlur(out,(3,3),0)
     out = cv2.resize(out,dsize=(66,200),interpolation = cv2.INTER_LINEAR)
